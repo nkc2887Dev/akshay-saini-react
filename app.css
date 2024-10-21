@@ -46,3 +46,36 @@
     box-shadow: 0px 0px 6px 1px black;
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the elements */
+    margin-top: 50px; /* Add some space from the top */
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .remove-filter {
+    background-color: #dc3545;
+  }
+  
+  .remove-filter:hover {
+    background-color: #c82333;
+  }
+  

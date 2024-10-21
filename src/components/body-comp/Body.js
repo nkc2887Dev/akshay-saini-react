@@ -9,16 +9,21 @@ const Body = () => {
   return (
     <div className="container">
       <Search
-        restaurantsList={restaurantsList}
         setRestaurantsList={setRestaurantsList}
         restaurants={restaurants}
       />
       <div className="restaurant-list">
-        {restaurantsList.map((restaurant) => {
-          return (
-            <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
-          );
-        })}
+        {restaurantsList.length > 0 ? (
+          restaurantsList.map((restaurant) => {
+            return (
+              <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
+            );
+          })
+        ) : (
+          <div style={{ textAlign: "right" }}>
+            <h2>No Records Found!</h2>
+          </div>
+        )}
       </div>
     </div>
   );
